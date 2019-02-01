@@ -5,7 +5,7 @@ subtitle: Starting a blog...
 image: /img/StateBolt.PNG
 gh-repo: mtdickey/mtdickey.github.io
 gh-badge: [star, fork, follow]
-tags: [test]
+tags: [hello_world]
 comments: true
 ---
 
