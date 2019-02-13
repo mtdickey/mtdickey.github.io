@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Exploring Chargers Route Trees
-subtitle: Starting a blog...
+subtitle: Finding the most effective receiver/route combinations
 image: /img/StateBolt.PNG
 gh-repo: mtdickey/mtdickey.github.io
 gh-badge: [star, fork, follow]
