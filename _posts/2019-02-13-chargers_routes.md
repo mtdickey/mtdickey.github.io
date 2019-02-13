@@ -14,7 +14,7 @@ The first step in the process was to define what a route is.  Here, I focused on
 
 ![AllenRoute](https://raw.githubusercontent.com/mtdickey/mtdickey.github.io/master/img/AllenRoute.gif)
  
-By looking at the shape of the route highlighted in red, we can tell this is a simple in/dig route, where the receiver cuts to the middle of the field.  We could potentially go through each of these routes and name them, but that would be very time consuming, since there were over 650 routes by Chargers receivers and tight ends during these 6 games alone (note: this excludes routes by running backs).  That’s where clustering comes in.
+By looking at the shape of the route highlighted in red, we can tell this is a simple in/dig route, where the receiver cuts in towards the middle of the field after about 10-15 yards.  We could potentially go through each of these routes and name them, but that would be very time consuming, since there were over 650 routes by Chargers receivers and tight ends during these 6 games alone (note: this excludes routes by running backs).  That’s where clustering comes in.
 
 However, this was not a straightforward or traditional clustering problem by any means.  The first problem was standardizing the position on the field for each receiver.  Since we’d like to classify routes based on whether the receiver is going towards the sideline or the middle of the field, this took some logic based on where the receiver was positioned at the start of the play.  Here’s what all the routes looked like after standardizing this way.
  
