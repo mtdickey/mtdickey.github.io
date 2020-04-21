@@ -31,7 +31,7 @@ Certainly, the Chargers and Colts offensive personnel are quite different.  The 
 
 This leads the question: what effect has offensive-line and receiver quality had on Rivers in his past seasons?
 
-Let's start with offensive-line quality.  How has Rivers' approximate value changed as his offensive line's approximate value changes?  Luckily approximate value is available for O-linement too, so we can calculate the average AV for the linemen who played each season with Rivers.  There is a pretty strong correlation (R-squared of 71.4%) between Rivers play and the play of his O-line.
+Let's start with offensive-line quality.  How has Rivers' approximate value changed as his offensive line's approximate value changes?  Luckily approximate value is available for O-linemen too, so we can calculate the average AV for the linemen who played each season with Rivers.  There is a pretty strong correlation (R-squared of 71.4%) between Rivers play and the play of his O-line.
 
 ![Rivers_Oline_Corr](https://raw.githubusercontent.com/mtdickey/mtdickey.github.io/master/img/Rivers_OLine_AV_Corr.png)
 
@@ -67,4 +67,4 @@ To see how this compares with all of his past seasons, see the table below:
 
 Since the draft is coming up, the Colts roster is still in flux.  Let's say they pick up a couple of receivers (hopefully Michael Pittman Jr., as this [mock draft](https://coltswire.usatoday.com/2020/04/20/2020-nfl-mock-draft-indianapolis-colts-final-7-round-projections-trades/) predicts, or Tee Higgins) and T.Y. Hilton can avoid injuries this year.  If the Colts average receiver value increases by 2, we can expect a value of 17 out of Rivers, tied for his 3rd best season of his career.
 
-In conclusion, it's tough to say how Rivers will play with the Colts this year.  While he will have the best collective offensive line of his career, the receiving corp is currently not up-to-par with the Chargers, and his past results with Frank Reich are not encouraging.  Based on a simplistic analysis, we can expect a relatively average year from Rivers if the offensive line and receivers stay where they are.  Although, the Colts would be smart to pick a receiver early in this year's draft to set Philip up for success.
+In conclusion, it's tough to say how Rivers will play with the Colts this year.  While he will have the best collective offensive line of his career, the receiving corps are currently not up-to-par with the Chargers, and his past results with Frank Reich are not encouraging.  Based on a simplistic analysis, we can expect a relatively average year from Rivers if the offensive line and receivers stay where they are.  Although, the Colts would be smart to pick a receiver early in this year's draft to set Philip up for success.
