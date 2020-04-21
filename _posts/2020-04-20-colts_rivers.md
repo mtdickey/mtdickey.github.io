@@ -2,7 +2,7 @@
 layout: post
 title: How will Philip Rivers fit in with the Colts?
 subtitle: A preview of what's to come for the Indianapolis offense.
-image: /img/Rivers_Colts.png
+image: /img/Rivers_Colts.jpeg
 gh-repo: mtdickey/mtdickey.github.io
 gh-badge: [star, fork, follow]
 comments: true
