@@ -41,7 +41,7 @@ prop.test(x = c(warren_succ, butler_succ), n = c(warren_n, butler_n))
 
 
 ## Bayesian Approach
-p <- seq(from=0.4, to=0.6, by=0.01) ## EFG for these players ranges from 0.4 to 0.6.  Assume uniform prior.
+p <- seq(from=0.4, to=0.6, by=0.005) ## EFG for these players ranges from 0.4 to 0.6.  Assume uniform prior.
 prior <- rep(1/length(p), length(p))
 war_likelihood <- dbinom(warren_succ, size = warren_n, prob = p)
 but_likelihood <- dbinom(butler_succ, size = butler_n, prob = p)
@@ -64,8 +64,8 @@ but_posterior <- but_numerator / but_denominator
 #barplot(but_posterior, names.arg = p, las = 2, main = "Posterior")
 
 ### Put Posteriors in a data.frame to visualize in ggplot
-efg_posterior_df <- data.frame(Player = c(rep("Warren", 21), rep("Butler", 21)),
-                               EFG = c(seq(from=0.4, to=0.6, by=0.01), seq(from=0.4, to=0.6, by=0.01)),
+efg_posterior_df <- data.frame(Player = c(rep("Warren", length(p)), rep("Butler", length(p))),
+                               EFG = c(p, p),
                                probs = c(war_posterior, but_posterior))
 
 ### Overlapping bar chart visualization in ggplot
@@ -98,7 +98,7 @@ prop.test(x = c(warren_succ, butler_succ), n = c(warren_n, butler_n))
 
 
 ## Bayesian Approach
-p <- seq(from=0.055, to=0.12, by=0.005) ## EFG for these players ranges from 0.06 to 0.12.  Assume uniform prior.
+p <- seq(from=0.055, to=0.12, by=0.001) ## EFG for these players ranges from 0.06 to 0.12.  Assume uniform prior.
 prior <- rep(1/length(p), length(p))
 war_likelihood <- dbinom(warren_succ, size = warren_n, prob = p)
 but_likelihood <- dbinom(butler_succ, size = butler_n, prob = p)
@@ -121,8 +121,8 @@ but_posterior <- but_numerator / but_denominator
 #barplot(but_posterior, names.arg = p, las = 2, main = "Posterior")
 
 ### Put Posteriors in a data.frame to visualize in ggplot
-tov_posterior_df <- data.frame(Player = c(rep("Warren", 14), rep("Butler", 14)),
-                               EFG = c(seq(from=0.055, to=0.12, by=0.005), seq(from=0.055, to=0.12, by=0.005)),
+tov_posterior_df <- data.frame(Player = c(rep("Warren", length(p)), rep("Butler", length(p))),
+                               EFG = c(p, p),
                                probs = c(war_posterior, but_posterior))
 
 ### Overlapping bar chart visualization in ggplot
@@ -215,7 +215,7 @@ prop.test(x = c(warren_succ, butler_succ), n = c(warren_n, butler_n))
 
 
 ## Bayesian Approach
-p <- seq(from=0.07, to=0.50, by=0.001) ## EFG for these players ranges from 0.06 to 0.12.  Assume uniform prior.
+p <- seq(from=0.07, to=0.50, by=0.005) ## EFG for these players ranges from 0.06 to 0.12.  Assume uniform prior.
 prior <- rep(1/length(p), length(p))
 war_likelihood <- dbinom(warren_succ, size = warren_n, prob = p)
 but_likelihood <- dbinom(butler_succ, size = butler_n, prob = p)
