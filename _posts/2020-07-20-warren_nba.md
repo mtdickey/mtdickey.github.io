@@ -31,14 +31,14 @@ Warren has a career 53.8% eFG compared to Butler's 49.0% - but is that a signifi
 	```
 	2-sample test for equality of proportions with continuity correction
 	
-	data:  c(warren_succ - 2136, butler_succ - 3894) out of c(warren_n - 4012, butler_n - 3894)
-	X-squared = 18.284, df = 1, p-value = 1.903e-05
+	data:  c(warren_succ - 2136, butler_succ - 3442) out of c(warren_n - 4012, butler_n - 7030)
+	X-squared = 18.536, df = 1, p-value = 1.667e-05
 	alternative hypothesis: two.sided
 	95 percent confidence interval:
-	 0.02245897 0.06074843
+	 0.02322830 0.06234542
 	sample estimates:
 	 prop 1    prop 2 
-	 0.5324028 0.4907991 
+	 0.5324028 0.4896159
 	```
 	
 	This approach shows a highly significant difference.  T.J. has an eFG% that is likely between 2% and 6% greater than Butler's.
