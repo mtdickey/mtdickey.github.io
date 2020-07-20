@@ -1,0 +1,95 @@
+---
+title: "Warren_Butler"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(statsr)
+library(tidyverse)
+setwd("C:\\Users\\mtdic\\Documents\\GitHub\\mtdickey.github.io\\_data")
+warren_butler_df <- read.csv("Warren_Butler.csv", stringsAsFactors = F)
+
+```
+
+# Comparing TJ Warren and Jimmy Butler
+
+## Shooting
+
+
+```{r shooting}
+
+## Summarise df into totals
+warren_butler_total_df = warren_butler_df %>% group_by(Player) %>%
+  summarise(tot_3p = sum(X3P),
+            tot_2p = sum(X2P),
+            tot_3fga = sum(X3PA),
+            tot_2fga = sum(X2PA)) %>% mutate(tot_fga = tot_2fga + tot_3fga,
+                                             efg = (tot_3p*1.5+tot_2p)/tot_fga,
+                                             tot_fgm = round(tot_3p*1.5+tot_2p))
+
+## Warren's numbers
+warren_succ = (warren_butler_total_df %>% filter(Player == "Warren") %>% select(tot_fgm))$tot_fgm
+warren_n    = (warren_butler_total_df %>% filter(Player == "Warren") %>% select(tot_fga))$tot_fga
+
+## Butler's numbers
+butler_succ = (warren_butler_total_df %>% filter(Player == "Butler") %>% select(tot_fgm))$tot_fgm
+butler_n    = (warren_butler_total_df %>% filter(Player == "Butler") %>% select(tot_fga))$tot_fga
+
+## Frequentist 2 Proportion Z test
+prop.test(x = c(warren_succ, butler_succ), n = c(warren_n, butler_n))
+
+
+## Bayesian Approach
+p <- seq(from=0.4, to=0.6, by=0.01) ## EFG for these players ranges from 0.4 to 0.6.  Assume uniform prior.
+prior <- rep(1/length(p), length(p))
+war_likelihood <- dbinom(warren_succ, size = warren_n, prob = p)
+but_likelihood <- dbinom(butler_succ, size = butler_n, prob = p)
+
+# posterior
+war_numerator <- prior * war_likelihood
+but_numerator <- prior * but_likelihood
+war_denominator <- sum(war_numerator)
+but_denominator <- sum(but_numerator)
+war_posterior <- war_numerator / war_denominator
+but_posterior <- but_numerator / but_denominator
+
+#par(mfrow = c(2,3), bg = NA)
+#barplot(prior, names.arg = p, las = 2, main = "Prior")
+#barplot(war_likelihood, names.arg = p, las = 2, main = "Likelihood")
+#barplot(war_posterior, names.arg = p, las = 2, main = "Posterior")
+#
+#barplot(prior, names.arg = p, las = 2, main = "Prior")
+#barplot(but_likelihood, names.arg = p, las = 2, main = "Likelihood")
+#barplot(but_posterior, names.arg = p, las = 2, main = "Posterior")
+
+### Put Posteriors in a data.frame to visualize in ggplot
+efg_posterior_df <- data.frame(Player = c(rep("Warren", 21), rep("Butler", 21)),
+                               EFG = c(seq(from=0.4, to=0.6, by=0.01), seq(from=0.4, to=0.6, by=0.01)),
+                               probs = c(war_posterior, but_posterior))
+
+### Overlapping bar chart visualization in ggplot
+#par(mfrow = c(1,1))
+ggplot(efg_posterior_df, aes(x=EFG,y=probs,fill=Player)) + 
+        geom_bar(stat="identity", position = "identity", alpha=.3) +
+        labs(x = "\neFG%", y = "Probability\n", title = "Butler vs. Warren: Posterior eFG% Distributions")
+
+```
+
+## Turnovers
+
+```{r turnovers, echo=FALSE}
+plot(pressure)
+```
+
+## Rebounding
+
+```{r rebounding, echo=FALSE}
+plot(pressure)
+```
+
+## Free Throws
+
+```{r freethrows, echo=FALSE}
+plot(pressure)
+```
