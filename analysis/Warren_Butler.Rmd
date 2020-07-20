@@ -79,17 +79,173 @@ ggplot(efg_posterior_df, aes(x=EFG,y=probs,fill=Player)) +
 ## Turnovers
 
 ```{r turnovers, echo=FALSE}
-plot(pressure)
+## Summarise df into totals
+warren_butler_total_df = warren_butler_df %>% mutate(turnover_opp = round(TOV/(TOV_pct/100))) %>% 
+  group_by(Player) %>%
+  summarise(tot_tov_opp = sum(turnover_opp),
+            tot_tov = sum(TOV))
+
+## Warren's numbers
+warren_succ = (warren_butler_total_df %>% filter(Player == "Warren") %>% select(tot_tov))$tot_tov
+warren_n    = (warren_butler_total_df %>% filter(Player == "Warren") %>% select(tot_tov_opp))$tot_tov_opp
+
+## Butler's numbers
+butler_succ = (warren_butler_total_df %>% filter(Player == "Butler") %>% select(tot_tov))$tot_tov
+butler_n    = (warren_butler_total_df %>% filter(Player == "Butler") %>% select(tot_tov_opp))$tot_tov_opp
+
+## Frequentist 2 Proportion Z test
+prop.test(x = c(warren_succ, butler_succ), n = c(warren_n, butler_n))
+
+
+## Bayesian Approach
+p <- seq(from=0.055, to=0.12, by=0.005) ## EFG for these players ranges from 0.06 to 0.12.  Assume uniform prior.
+prior <- rep(1/length(p), length(p))
+war_likelihood <- dbinom(warren_succ, size = warren_n, prob = p)
+but_likelihood <- dbinom(butler_succ, size = butler_n, prob = p)
+
+# posterior
+war_numerator <- prior * war_likelihood
+but_numerator <- prior * but_likelihood
+war_denominator <- sum(war_numerator)
+but_denominator <- sum(but_numerator)
+war_posterior <- war_numerator / war_denominator
+but_posterior <- but_numerator / but_denominator
+
+#par(mfrow = c(2,3), bg = NA)
+#barplot(prior, names.arg = p, las = 2, main = "Prior")
+#barplot(war_likelihood, names.arg = p, las = 2, main = "Likelihood")
+#barplot(war_posterior, names.arg = p, las = 2, main = "Posterior")
+#
+#barplot(prior, names.arg = p, las = 2, main = "Prior")
+#barplot(but_likelihood, names.arg = p, las = 2, main = "Likelihood")
+#barplot(but_posterior, names.arg = p, las = 2, main = "Posterior")
+
+### Put Posteriors in a data.frame to visualize in ggplot
+tov_posterior_df <- data.frame(Player = c(rep("Warren", 14), rep("Butler", 14)),
+                               EFG = c(seq(from=0.055, to=0.12, by=0.005), seq(from=0.055, to=0.12, by=0.005)),
+                               probs = c(war_posterior, but_posterior))
+
+### Overlapping bar chart visualization in ggplot
+#par(mfrow = c(1,1))
+ggplot(tov_posterior_df, aes(x=EFG,y=probs,fill=Player)) + 
+        geom_bar(stat="identity", position = "identity", alpha=.3) +
+        labs(x = "\nTOV%", y = "Probability\n", title = "Butler vs. Warren: Posterior TOV% Distributions")
 ```
 
 ## Rebounding
 
 ```{r rebounding, echo=FALSE}
-plot(pressure)
+## Summarise df into totals
+warren_butler_total_df = warren_butler_df %>% mutate(trb_opp = round(TRB/(TRB_pct/100))) %>% 
+  group_by(Player) %>%
+  summarise(tot_trb_opp = sum(trb_opp),
+            tot_trb = sum(TRB))
+
+## Warren's numbers
+warren_succ = (warren_butler_total_df %>% filter(Player == "Warren") %>% select(tot_trb))$tot_trb
+warren_n    = (warren_butler_total_df %>% filter(Player == "Warren") %>% select(tot_trb_opp))$tot_trb_opp
+
+## Butler's numbers
+butler_succ = (warren_butler_total_df %>% filter(Player == "Butler") %>% select(tot_trb))$tot_trb
+butler_n    = (warren_butler_total_df %>% filter(Player == "Butler") %>% select(tot_trb_opp))$tot_trb_opp
+
+## Frequentist 2 Proportion Z test
+prop.test(x = c(warren_succ, butler_succ), n = c(warren_n, butler_n))
+
+
+## Bayesian Approach
+p <- seq(from=0.06, to=0.1, by=0.001) ## EFG for these players ranges from 0.06 to 0.12.  Assume uniform prior.
+prior <- rep(1/length(p), length(p))
+war_likelihood <- dbinom(warren_succ, size = warren_n, prob = p)
+but_likelihood <- dbinom(butler_succ, size = butler_n, prob = p)
+
+# posterior
+war_numerator <- prior * war_likelihood
+but_numerator <- prior * but_likelihood
+war_denominator <- sum(war_numerator)
+but_denominator <- sum(but_numerator)
+war_posterior <- war_numerator / war_denominator
+but_posterior <- but_numerator / but_denominator
+
+#par(mfrow = c(2,3), bg = NA)
+#barplot(prior, names.arg = p, las = 2, main = "Prior")
+#barplot(war_likelihood, names.arg = p, las = 2, main = "Likelihood")
+#barplot(war_posterior, names.arg = p, las = 2, main = "Posterior")
+#
+#barplot(prior, names.arg = p, las = 2, main = "Prior")
+#barplot(but_likelihood, names.arg = p, las = 2, main = "Likelihood")
+#barplot(but_posterior, names.arg = p, las = 2, main = "Posterior")
+
+### Put Posteriors in a data.frame to visualize in ggplot
+trb_posterior_df <- data.frame(Player = c(rep("Warren", length(p)), rep("Butler", length(p))),
+                               TRB = c(p, p),
+                               probs = c(war_posterior, but_posterior))
+
+### Overlapping bar chart visualization in ggplot
+#par(mfrow = c(1,1))
+ggplot(trb_posterior_df, aes(x=TRB,y=probs,fill=Player)) + 
+        geom_bar(stat="identity", position = "identity", alpha=.3) +
+        labs(x = "\nTRB%", y = "Probability\n", title = "Butler vs. Warren: Posterior TRB% Distributions")
+
+## Assuming independence, find % chance that Warren is >= Butler
+(sum(trb_posterior_df[which(trb_posterior_df$TRB > 0.08 & trb_posterior_df$Player  == "Warren"),]$probs) * 
+ sum(trb_posterior_df[which(trb_posterior_df$TRB <= 0.081 & trb_posterior_df$Player  == "Butler"),]$probs) )
+
 ```
 
 ## Free Throws
 
 ```{r freethrows, echo=FALSE}
-plot(pressure)
+## Summarise df into totals
+warren_butler_total_df = warren_butler_df %>% mutate(FGA = X3PA + X2PA) %>%
+  group_by(Player) %>%
+  summarise(tot_ft = sum(FT),
+            tot_fga = sum(FGA))
+
+## Warren's numbers
+warren_succ = (warren_butler_total_df %>% filter(Player == "Warren") %>% select(tot_ft))$tot_ft
+warren_n    = (warren_butler_total_df %>% filter(Player == "Warren") %>% select(tot_fga))$tot_fga
+
+## Butler's numbers
+butler_succ = (warren_butler_total_df %>% filter(Player == "Butler") %>% select(tot_ft))$tot_ft
+butler_n    = (warren_butler_total_df %>% filter(Player == "Butler") %>% select(tot_fga))$tot_fga
+
+## Frequentist 2 Proportion Z test
+prop.test(x = c(warren_succ, butler_succ), n = c(warren_n, butler_n))
+
+
+## Bayesian Approach
+p <- seq(from=0.07, to=0.50, by=0.001) ## EFG for these players ranges from 0.06 to 0.12.  Assume uniform prior.
+prior <- rep(1/length(p), length(p))
+war_likelihood <- dbinom(warren_succ, size = warren_n, prob = p)
+but_likelihood <- dbinom(butler_succ, size = butler_n, prob = p)
+
+# posterior
+war_numerator <- prior * war_likelihood
+but_numerator <- prior * but_likelihood
+war_denominator <- sum(war_numerator)
+but_denominator <- sum(but_numerator)
+war_posterior <- war_numerator / war_denominator
+but_posterior <- but_numerator / but_denominator
+
+#par(mfrow = c(2,3), bg = NA)
+#barplot(prior, names.arg = p, las = 2, main = "Prior")
+#barplot(war_likelihood, names.arg = p, las = 2, main = "Likelihood")
+#barplot(war_posterior, names.arg = p, las = 2, main = "Posterior")
+#
+#barplot(prior, names.arg = p, las = 2, main = "Prior")
+#barplot(but_likelihood, names.arg = p, las = 2, main = "Likelihood")
+#barplot(but_posterior, names.arg = p, las = 2, main = "Posterior")
+
+### Put Posteriors in a data.frame to visualize in ggplot
+ft_posterior_df <- data.frame(Player = c(rep("Warren", length(p)), rep("Butler", length(p))),
+                               TRB = c(p, p),
+                               probs = c(war_posterior, but_posterior))
+
+### Overlapping bar chart visualization in ggplot
+#par(mfrow = c(1,1))
+ggplot(ft_posterior_df, aes(x=TRB,y=probs,fill=Player)) + 
+        geom_bar(stat="identity", position = "identity", alpha=.3) +
+        labs(x = "\nFT/FGA", y = "Probability\n", title = "Butler vs. Warren: Posterior FT/FGA Distributions")
+
 ```

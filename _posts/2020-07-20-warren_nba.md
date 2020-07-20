@@ -12,7 +12,7 @@ The NBA is finally returning this week after taking a break for over 4 months du
 
 ![Pacers_Heat](https://raw.githubusercontent.com/mtdickey/mtdickey.github.io/master/img/Pacers_Heat.jpg)
 
-In this post, I will be investigating who has the upper-hand in the feud between Warren and Butler.  Butler certainly is the bigger name and has far more accolades to boast: he's a 5-time all-star, 4-time All-Defensive team, 2-time All-NBA player, and Olympic gold-medalist.  However, Warren is a rising star and touts slightly better offensive efficiency metrics.
+In this post, I will be investigating who has the upper-hand in the feud between Warren and Butler.  Butler certainly is the bigger name and has far more accolades to boast: he's a 5-time all-star, 4-time All-Defensive team, 2-time All-NBA player, and an Olympic gold-medalist.  However, Warren is a rising star and is the Pacer's top scoring threat.
 
 In this post, I'll be comparing the ["Four Factors"](https://www.basketball-reference.com/about/factors.html) for Butler and Warren:
   1. Shooting (Effective Field Goal Percentage, eFG%)
@@ -57,27 +57,37 @@ We'll chalk this one up to Warren.  This is not super surprising because T.J. is
 
 Now let's look at their turnover rates.  This can give a sense of their ball-handling and decision making skills on offense.
 
-Warren has a career 7.0% turnover percentage compared to Jimmy's 9.3%.
+Warren has a career 7.0% turnover percentage compared to Jimmy's 9.3%.  I personally have a hard time interpretting TOV% because it's hard to imagine how big the denominator is, since it's an estimate of the number of possessions.
 
-This is part of T.J.'s game that doesn't get much credit - but he has spent 3 of the last 4 seasons in the top 10 in the league in TOV%.  We'll chalk this one up to T.J. again.
+Using the Bayesian approach described above, we can create distributions of the most likely true TOV% for Warren and Butler.  Again, there is hardly any overlap between the distributions, and we can safely assume Warren costs his team significantly less in terms of turnovers per game.
+
+![tov](https://raw.githubusercontent.com/mtdickey/mtdickey.github.io/master/img/Warren_Butler_tov.png)
+
+This is part of T.J.'s game that doesn't get much credit - but he has spent 3 of the last 4 seasons in the top 10 in the league in TOV%.  
+
+We'll chalk this one up to T.J. again.  The score is 2-0, T.J., for all of those keeping score at home.
 
 ### Rebounding
 
-We will compare the total-rebounding percentages as a sense of both offensive and defensive rebounding abilities.
+We will compare the total rebounding percentages as a sense of both offensive and defensive rebounding abilities.
 
-The career rebounding percentage for "Jimmy G. Buckets" is 8.5%, Tony Buckets is sitting at 7.8%.  At first glance, this doesn't seem like a huge difference, but let's see if it's statistically significant.
+The career rebounding percentage for "Jimmy G. Buckets" is 8.5% and Tony Buckets is sitting at 7.8%.  At first glance, this doesn't seem like a huge difference, but let's see if it's statistically significant.
 
-Due to the huge sample size involved with rebounding opportunities throughout their careers, this is signficant.  It's also worth mentioning that Jimmy's rebounding has improved significantly this year, up to 10.9% in his first season with Miami.
+![trb](https://raw.githubusercontent.com/mtdickey/mtdickey.github.io/master/img/Warren_Butler_trb.png)
 
-Butler takes his first category with an advantage in the rebounding department.
+This is the closest call yet.  However, the area of overlap is still less than 1 percent, and it's a significant difference.  It's also worth mentioning that Jimmy's rebounding has improved significantly this year, up to 10.9% in his first season with Miami.
+
+Butler takes his first category with an advantage in the rebounding department.  Score is now Warren: 2, Butler: 1.
 
 ### Free Throws
 
 Finally, we'll use the ratio of free-throws made to field-goals attempted to compare both how often each player gets to the line and how often they make those those free-throws.
 
-On average, Jimmy creates about 0.42 extra points from free-throws for every field goal attempted.  Meanwhile, T.J. is sitting at a much lower 0.16.  This is a significant margin by any test.
+On average, Jimmy creates about 0.42 extra points from free-throws for every field goal attempted.  Meanwhile, T.J. is sitting at a much lower 0.16.  This is a significant margin by any test... it's really not even close.
 
-This isn't especially surprising: Butler attempts more than twice the number of FTs/game as Warren (6.1 to 2.5).  Jimmy gets the last laugh by taking this category.
+![ft](https://raw.githubusercontent.com/mtdickey/mtdickey.github.io/master/img/Warren_Butler_ft.png)
+
+So Jimmy wins the closest race (rebounding) and also has the biggest blow-out here in the free throw category.  This isn't especially surprising: Butler attempts more than twice the number of FTs/game as Warren (6.1 to 2.5).  Jimmy gets the last laugh by taking this category.
 
 ### Final Tally
 
@@ -90,6 +100,6 @@ This isn't especially surprising: Butler attempts more than twice the number of 
 
 
 
-So there you have it, T.J. and Jimmy are dead even after comparing the 4 main offensive categories.  They are very different players, each with their unique strengths and weaknesses.  Although I didn't get into the stats here, Butler is absolutely the better defender, but that isn't so clear on the offensive end.
+So there you have it, T.J. and Jimmy are dead even after comparing the 4 main offensive categories.  They are very different players, each with unique strengths and weaknesses.  Although I didn't get into the stats here, Butler is absolutely the better defender, but that isn't so clear on the offensive end.
 
 Looking forward, on August 10th the Pacers and Heat will play in one of the final games to determine playoff seeds.  Jimmy has been [talking trash and circled the Pacers game on his calendar](https://twitter.com/SBNation/status/1215112067335774208) so it'll be fun to watch this match-up.  Currently, the Heat are the 4th seed and the Pacers are 2 games back as the 5th seed.
