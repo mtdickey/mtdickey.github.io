@@ -24,7 +24,7 @@ In this post, I'll be comparing the ["Four Factors"](https://www.basketball-refe
 
 Let's start by comparing their shooting.  We'll use effective field-goal percentage because this accounts for the different values of 2 and 3 point shots.
 
-Warren has a career 53.8% eFG compared to Butler's 49.0% - but is that a significant difference?  We can look at this a question a couple of ways:
+Warren has a career 53.8% eFG compared to Butler's 49.0% - but is that a significant difference?  We can look at this question a couple of ways:
 
  1. Frequentist approach - 2-proportion Z-test:
     
