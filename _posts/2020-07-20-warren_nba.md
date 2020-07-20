@@ -102,4 +102,4 @@ So Jimmy wins the closest race (rebounding) and also has the biggest blow-out he
 
 So there you have it, T.J. and Jimmy are dead even after comparing the 4 main offensive categories.  They are very different players, each with unique strengths and weaknesses.  Although I didn't get into the stats here, Butler is absolutely the better defender, but that isn't so clear on the offensive end.
 
-Looking forward, on August 10th the Pacers and Heat will play in one of the final games to determine playoff seeds.  Jimmy has been [talking trash and circled the Pacers game on his calendar](https://twitter.com/SBNation/status/1215112067335774208) so it'll be fun to watch this match-up.  Currently, the Heat are the 4th seed and the Pacers are 2 games back as the 5th seed.
+Looking forward, on August 10th the Pacers and Heat will play in one of the final games to determine playoff seeds.  Jimmy has been [talking trash and circled the Pacers game on his calendar](https://twitter.com/SBNation/status/1215112067335774208) so it'll be fun to watch this match-up.  Currently, the Heat are the 4th seed and the Pacers are 2 games back as the 5th seed in the Eastern Conference.
