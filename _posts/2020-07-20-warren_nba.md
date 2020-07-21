@@ -1,14 +1,14 @@
 ---
 layout: post
 title: T.J. Warren vs. Jimmy Butler
-subtitle: Who's better?
+subtitle: Are they in the "same league"?
 image: /img/Warren_Butler.jpg
 gh-repo: mtdickey/mtdickey.github.io
 gh-badge: [star, fork, follow]
 comments: true
 ---
 
-The NBA is finally returning this week after taking a break for over 4 months due to the coronavirus pandemic.  One bit of drama to watch in the "Disney bubble" is the [beef between TJ Warren and Jimmy Butler](https://www.sbnation.com/nba/2020/1/8/21057795/jimmy-butler-vs-tj-warren-ejection-miami-heat-indiana-pacers-fight-trash-kisses).  The Pacers and Heat even have neighboring practice courts, so they are bound to clash often.
+The NBA is finally returning this week after taking a break for over 4 months due to the coronavirus pandemic.  One bit of drama to watch in the "Disney bubble" is the [beef between TJ Warren and Jimmy Butler](https://www.sbnation.com/nba/2020/1/8/21057795/jimmy-butler-vs-tj-warren-ejection-miami-heat-indiana-pacers-fight-trash-kisses).  Back in January, Butler called Warren "soft", "trash", and "not even in my f------ league".  The Pacers and Heat even have neighboring practice courts, so they are bound to clash often over the coming months.
 
 ![Pacers_Heat](https://raw.githubusercontent.com/mtdickey/mtdickey.github.io/master/img/Pacers_Heat.jpg)
 
@@ -100,6 +100,8 @@ So Jimmy wins the closest race (rebounding) and also has the biggest blow-out he
 
 
 
-So there you have it, T.J. and Jimmy are dead even after comparing the 4 main offensive categories.  They are very different players, each with unique strengths and weaknesses.  Although I didn't get into the stats here, Butler is absolutely the better defender, but that isn't so clear on the offensive end.
+So there you have it, T.J. and Jimmy are dead even after comparing the 4 main offensive categories.  Going back to Jimmy's trash talk, I'd say they T.J. actually is "in his f------ league".
+
+I'll admit, this analysis doesn't cover everything.  Butler is absolutely the better defender, but that isn't so clear on the offensive end.  They are very different players each with unique strengths and weaknesses.
 
 Looking forward, on August 10th the Pacers and Heat will play in one of the final games to determine playoff seeds.  Jimmy has been [talking trash and circled the Pacers game on his calendar](https://twitter.com/SBNation/status/1215112067335774208) so it'll be fun to watch this match-up.  Currently, the Heat are the 4th seed and the Pacers are 2 games back as the 5th seed in the Eastern Conference.
