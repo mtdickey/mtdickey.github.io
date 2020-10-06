@@ -109,3 +109,5 @@ Looking forward, on August 10th the Pacers and Heat will play in one of the fina
 ##### Update 10/6/2020:
 
 While Warren had a [hot start in the bubble](https://www.sbnation.com/nba/2020/8/5/21355194/tj-warren-bubble-stats-highlights-videos-points) through 3 games, it was Butler who really came out on top in this matchup.  His Heat convincingly swept the Pacers in the first round of the playoffs and cruised to the NBA Finals.  Jimmy just had a [40-point triple-double](http://www.nba.com/article/2020/10/04/jimmy-butler-triple-double-finals) in Game 3 and looks to even the Finals series with the Lakers in Game 4 tonight.
+
+Another thing worth mentioning in this update is that while Jimmy Butler is not a great long-range shooter, that does not mean he is a bad player.  As this [article](https://www.nbcsports.com/national/miami-heats-jimmy-butler-defies-anti-analytics-guy-myth) points out, "the analytics community *likes* 3-pointers, but they *love* free throws".  Jimmy's knack for getting to the free-throw line and creating great shots for his teammates is what makes him a great player.
