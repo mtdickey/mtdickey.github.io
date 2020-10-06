@@ -12,9 +12,9 @@ The NBA is finally returning this week after taking a break for over 4 months du
 
 ![Pacers_Heat](https://raw.githubusercontent.com/mtdickey/mtdickey.github.io/master/img/Pacers_Heat.jpg)
 
-In this post, I will be investigating who has the upper-hand in the feud between Warren and Butler.  Butler certainly is the bigger name and has far more accolades to boast: he's a 5-time all-star, 4-time All-Defensive team, 2-time All-NBA player, and an Olympic gold-medalist.  However, Warren is a rising star and is the Pacer's top scoring threat.
+In this post, I will be comparing Warren and Butler to determine if Jimmy's comments hold water or if he's just blowing smoke.  Butler certainly is the bigger name and has far more accolades to boast: he's a 5-time all-star, 4-time All-Defensive team, 2-time All-NBA player, and an Olympic gold-medalist.  However, Warren is a rising star and is the Pacer's top scoring threat.
 
-In this post, I'll be comparing the ["Four Factors"](https://www.basketball-reference.com/about/factors.html) for Butler and Warren:
+In this post, I'll be comparing the famous ["Four Factors"](https://www.basketball-reference.com/about/factors.html) for Butler and Warren's offensive games:
   1. Shooting (Effective Field Goal Percentage, eFG%)
   2. Turnovers (TOV%)
   3. Rebounding (TRB%)
@@ -102,6 +102,10 @@ So Jimmy wins the closest race (rebounding) and also has the biggest blow-out he
 
 So there you have it, T.J. and Jimmy are dead even after comparing the 4 main offensive categories.  Going back to Jimmy's trash talk, I'd say they T.J. actually is "in his f------ league".
 
-I'll admit, this analysis doesn't cover everything.  Butler is absolutely the better defender, but that isn't so clear on the offensive end.  They are very different players each with unique strengths and weaknesses.
+I'll admit, this analysis doesn't cover everything.  Butler is absolutely the better defender, but that isn't so clear on the offensive end.  They are very different players, each with unique strengths and weaknesses.
 
 Looking forward, on August 10th the Pacers and Heat will play in one of the final games to determine playoff seeds.  Jimmy has been [talking trash and circled the Pacers game on his calendar](https://twitter.com/SBNation/status/1215112067335774208) so it'll be fun to watch this match-up.  Currently, the Heat are the 4th seed and the Pacers are 2 games back as the 5th seed in the Eastern Conference.
+
+##### Update 10/6/2020:
+
+While Warren had a [hot start in the bubble](https://www.sbnation.com/nba/2020/8/5/21355194/tj-warren-bubble-stats-highlights-videos-points) through 3 games, it was Butler who really came out on top in this matchup.  His Heat convincingly swept the Pacers in the first round of the playoffs and cruised to the NBA Finals.  Jimmy just had a [40-point triple-double](http://www.nba.com/article/2020/10/04/jimmy-butler-triple-double-finals) in Game 3 and looks to even the Finals series with the Lakers in Game 4 tonight.

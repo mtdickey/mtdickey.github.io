@@ -7,3 +7,7 @@ _site
 .DS_Store
 Thumbs.db
 ehthumbs.db
+
+# analysis
+_data/.RHistory
+_analysis/.ipynb_checkpoints/*
