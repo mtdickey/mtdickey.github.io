@@ -68,3 +68,9 @@ To see how this compares with all of his past seasons, see the table below:
 Since the draft is coming up, the Colts roster is still in flux.  Let's say they pick up a couple of receivers (hopefully Michael Pittman Jr., as this [mock draft](https://coltswire.usatoday.com/2020/04/20/2020-nfl-mock-draft-indianapolis-colts-final-7-round-projections-trades/) predicts, or Tee Higgins) and T.Y. Hilton can avoid injuries this year.  If the Colts average receiver value increases by 2, we can expect a value of 17 out of Rivers, tied for his 3rd best season of his career.
 
 In conclusion, it's tough to say how Rivers will play with the Colts this year.  While he will have the best collective offensive line of his career, the receiving corps are currently not up-to-par with the Chargers, and his past results with Frank Reich are not encouraging.  Based on a simplistic analysis, we can expect a relatively average year from Rivers if the offensive line and receivers stay where they are.  Although, the Colts would be smart to pick a receiver early in this year's draft to set Philip up for success.
+
+##### Update 2/18/2021:
+
+Rivers had a decent final season of his career after joining the Colts.  Although Pro-Football Reference's Approximate Value for his season was only 12 (below the 15 predicted above), he led the Colts to a 11-5 record and a Wildcard playoff appearance.  For the 8th season in a row and 12th season in his career, he passed for over 4000 yards.  This has him currently tied for 2nd with Brady and Brees for most all-time (behind only Peyton Manning).  
+
+I will make a post about his career and legacy, both in college and the NFL, in due time.  For now I'll just say thanks for all the memories, 17.  You will be missed.
