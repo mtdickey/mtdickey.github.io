@@ -28,7 +28,7 @@ As you can see in the plot, I attempted to name the 15 route types into names li
 
 From here, we just need to quantify what the “best” routes were.  Let’s see what the top 15 receiver/route combinations are by success rates when targeted (targets are inferred by the closest receiver to the ball when the data indicates that the pass “arrived”).
 
-| Rank |	Route	| Receiver |	Number of Routes |	Number of Targets |	Completion Pct. |	Avg. Yards |	Target Rate |	Success Rate |
+| Rank |	Route	| Receiver |	Number of Routes |	Number of Targets |	Success Rate |	Avg. Yards |	Target Rate |	Completion Pct. |
 | :--- |:--- | :--- | :--- |:--- | :--- | :--- |:--- | :--- |
 | 1 |	11: Cross (5-15 yds) |	Keenan Allen |	11 |	3 |	91% |	20 |	27% |	100% |
 | 2	| 1: Straight (5-15 yds) |	Keenan Allen |	13 |	5	| 85% |	7	| 39% |	80% |
@@ -48,9 +48,9 @@ From here, we just need to quantify what the “best” routes were.  Let’s se
 
 * Notes: 
   * Route/Receiver combinations with fewer than 3 targets excluded.
-  * Success rate is defined as the percent of plays that gain: >= 33% of yards to gain on 1st down, >= 50% of yards to gain on 2nd down, and 100% of yards to gain on 3rd and 4th down.
+  * Success rate is defined as the percent of plays (regardless of who is targeted) that gain: >= 33% of yards to gain on 1st down, >= 50% of yards to gain on 2nd down, and 100% of yards to gain on 3rd and 4th down.
 
 
-Keenan Allen, the Chargers #1 receiver and Pro-Bowler, has his fair share of the top routes - taking 4 out of the top 5.  However, this table suggests that he may not be targeted as often as he should be.  Although he ran a lot of crossing routes, he was only targeted 27% of the time.  Meanwhile, Travis Benjamin was targeted on 5 out of 7 of his deep fade routes – a boom or bust play that only pays off about 40% of the time (and we have seen some recent examples of [when it doesn’t pay off](https://twitter.com/TomKCTV5/status/1039232683744870400)).  If I’m the Chargers, I let Keenan run more of these slant/crossing routes. Although they're short routes, they are highly successful and can create a lot of yards after the catch.
+Keenan Allen, the Chargers #1 receiver and Pro-Bowler, has his fair share of the top routes in terms of completion % when targeted - taking 4 out of the top 5.  However, this table suggests that he may not be targeted as often as he should be.  Although he ran a lot of crossing routes, he was only targeted 27% of the time.  Meanwhile, Travis Benjamin was targeted on 5 out of 7 of his deep fade routes – a boom or bust play that only pays off about 40% of the time (and we have seen some recent examples of [when it doesn’t pay off](https://twitter.com/TomKCTV5/status/1039232683744870400)).  If I’m the Chargers, I let Keenan run more of these slant/crossing routes. Although they're short routes, they are highly successful and can create a lot of yards after the catch.
 
 For Tyrell Williams, an unrestricted free-agent this offseason, and Travis Benjamin (who is rumored to be on the chopping block) these numbers don’t suggest their route trees were very effective in this 6 games stretch.  Here’s to hoping the Chargers find new receivers to step up in their spots next season.
